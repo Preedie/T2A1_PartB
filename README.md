@@ -91,3 +91,10 @@ Array to be sorted = [7, 2, 4]
 
 - Due to Pancake being a being a in-place sorting algorithm no extra space is required to for it to operate, meaning it can operate on the array where it is rather than "needing space". Space Complexity O(1).
 
+# Comparison
+
+## 
+Time Complexity
+
+- Both of these sorting algorithms share the same space effciency due to using the operate in-place.  (they perform their sorting operations on the array so no extra space is required).
+
