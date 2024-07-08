@@ -89,4 +89,5 @@ Array to be sorted = [7, 2, 4]
 
 - In the worst scenario, where n is the number of elements in the array. This is becasue the worst case scenario is each element requiring multiple flips to reach its correct position. Time Complexity O(n2)
 
-- 
+- Due to Pancake being a being a in-place sorting algorithm no extra space is required to for it to operate, meaning it can operate on the array where it is rather than "needing space". Space Complexity O(1).
+
