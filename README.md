@@ -93,8 +93,94 @@ Array to be sorted = [7, 2, 4]
 
 # Comparison
 
-## 
-Time Complexity
+## Time Complexity
 
-- Both of these sorting algorithms share the same space effciency due to using the operate in-place.  (they perform their sorting operations on the array so no extra space is required).
+- Both of these sorting algorithms share the same space effciency O(1) due to using the operate in-place.  (they perform their sorting operations on the array so no extra space is required).
+
+- Both algorithms use quadratic time complexity in the average to worst case scenarios (O(n^2)). This makes them inefficient for large projects or datasets compared to more efficient algorithms like quicksort or mergesort which can achieve O(n log n) time complexity in the average case scenario.
+
+- While both algorithms are easy to implement and understand they have performance limitations when operating in worst case scenarios (especially) which will restrict them being very useful in a large dataset situation where other, quicker, sorting alorgorithms would be more useful.
+
+- The application these particular sorting algorithms thrive in are simple in place sorting enviroments which minimal space and usage are being prioritized over the sorting speed or of course for educational purposes.
+
+# Search Algorithms
+
+## Dijkstra's Algorithm
+
+Dijkstra's algorithm is used to find the shortest path from a sourcce node to all other nodes in a graph with weighted edges that are not negative.
+
+### How it Works
+
+1. Initialization
+
+- the algorithm will start witha priority queue to keep track of the minimum distances from the source node to each other node on the graph.
+
+- The distances will be initialized for all the nodes, except for the source node which is set to 0
+
+2. Processing the nodes
+
+- the smallest node in the priority queue is then extracted.
+
+- Each node next to the extracted node will then be "measured" via their weights from the source node through the current node. If the distance is msaller than the previously known distances then the algorithm will update the distance and update the priority que.
+
+3. Rinse and Repeat
+
+- The above steps are then repeated until all the nodes have been processed OR until the priority que is empty.
+
+4. Results
+
+- after the algorithm is complete and ends, the shortest path distances from the source node to all other nodes will be known.
+
+## Effeciency 
+
+- When it comes to effciency dijkstra's algorthims time complexity will rely on the implementation of the priority que.
+
+- The time complexity of Dijkstra's algorithm is O((V+E)logV), where 
+V is the number of vertices and E is the number of edges.
+
+- If a fibonacci heap is used the complexity can be reduced to O(VlogV+E).
+
+# Linear Search
+
+Linear search is a very simple searching algorithm that searches for a element  sequentially until the target element is found or all of the elements have been checked.
+
+1. Interate the List
+
+- Starting from the beginning of the list.
+
+- Compare each element with the target element/value.
+
+2. Comparison 
+
+- if the current element matches the target element, the algorithm will return the targets index or depending on the context it will return TRUE.
+
+- If the end of the list is reached without finding the target element then the return will be FALSE or -1.
+
+## Effeciency 
+
+- Linear Searches time complexity is O(n), where n is the number of elements in the list being searched.
+
+- This means in the worst case scenario Linear Search may need to look at each element in the list to find the target element or work out if it does not exist in the list.
+
+# Comparison of Dijkstra's Search and Linear Search Algorithms
+
+1. Time Complexity
+
+- Dijkstra due to its time complexity O((V+E)logV) using a binary heap, which is more effcient than Linear Searches O(n) complexity in most scenarions and especially so for large datasets.
+
+As V and E grow, Dijkstra's algorithm can and is far faster than Linear Searches because Dijkstra's Algorithm processes the nodes based on their shortest path potential rather than checking over each node sequentially.
+
+2. Suitability
+
+- Dijkstra's algorithm is good for finding the sortest paths in graphs aslong as the weights are not negative.
+
+- Linear Search Algorithm is good for unsorted lists where the exact location of a element is needed. (perhaps without a time constraint)
+
+3. Data Structure Dependancy 
+
+- Dijkstra's algorithm will require a graph structure and a priority queue (heap) for it to be effeciently implemented.
+
+- Linear Search algorithm only requires a basic list or array.
+
+Ultimately, Dijkstra's algorithm is more efficient for its intended purpose which is finding the shortest paths in weighted graphs, aand this is especially so in larger datasets where effeciency matters. Linear Search as it is a simpler algorithm, it wil be less efficient for large lists compared to other specialized search algorithms like a binary search. Each of the algorithms serves a purposes which is dependant on the structure and of course the requirements of the data being processed.
 
