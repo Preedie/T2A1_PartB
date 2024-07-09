@@ -182,5 +182,6 @@ As V and E grow, Dijkstra's algorithm can and is far faster than Linear Searches
 
 - Linear Search algorithm only requires a basic list or array.
 
-Ultimately, Dijkstra's algorithm is more efficient for its intended purpose which is finding the shortest paths in weighted graphs, aand this is especially so in larger datasets where effeciency matters. Linear Search as it is a simpler algorithm, it wil be less efficient for large lists compared to other specialized search algorithms like a binary search. Each of the algorithms serves a purposes which is dependant on the structure and of course the requirements of the data being processed.
+# Conclusion
 
+Ultimately, Dijkstra's algorithm is more efficient for its intended purpose which is finding the shortest paths in weighted graphs, aand this is especially so in larger datasets where effeciency matters. Linear Search as it is a simpler algorithm, it wil be less efficient for large lists compared to other specialized search algorithms like a binary search. Each of the algorithms serves a purposes which is dependant on the structure and of course the requirements of the data being processed.
